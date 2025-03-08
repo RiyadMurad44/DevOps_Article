@@ -16,8 +16,7 @@ class UserTable {
             id INT AUTO_INCREMENT PRIMARY KEY,
             fullname VARCHAR(255) NOT NULL,
             email VARCHAR(255) NOT NULL UNIQUE,
-            password TEXT NOT NULL,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            password TEXT NOT NULL
         )";
 
         if ($conn->query($sql) === TRUE) {
