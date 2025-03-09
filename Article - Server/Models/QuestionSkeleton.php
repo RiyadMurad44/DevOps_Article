@@ -1,13 +1,13 @@
 <?php
 // QuestionSkeleton.php
 
-class QuestionSkeleton {
+abstract class QuestionSkeleton {
     protected static $conn;
     protected static $table = "questions";
 
-    private $id;
-    private $question;
-    private $answer;
+    protected $id;
+    protected $question;
+    protected $answer;
 
     // Constructor
     public function __construct($id = null, $question = "", $answer = "") {
@@ -16,7 +16,7 @@ class QuestionSkeleton {
         $this->answer = $answer;
     }
 
-    // Initialize a new question instance with the database connection
+    // Initialize the database connection
     public static function init($conn) {
         self::$conn = $conn;
     }
@@ -46,6 +46,14 @@ class QuestionSkeleton {
     public function setAnswer($answer) {
         $this->answer = $answer;
     }
+
+    // Abstract methods to be implemented in the child class
+    abstract public static function create($question, $answer);
+    abstract public static function getById($id);
+    abstract public static function getAll();
+    abstract public static function update($id, $question, $answer);
+    abstract public static function delete($id);
 }
 ?>
+
 

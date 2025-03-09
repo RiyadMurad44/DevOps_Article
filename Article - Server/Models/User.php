@@ -29,7 +29,6 @@ class User extends UserSkeleton {
         return $stmt->execute();
     }
 
-    // Read user by ID
     public static function getById($id) {
         $sql = "SELECT * FROM " . self::$table . " WHERE id = ?";
         $stmt = self::$conn->prepare($sql);
@@ -38,17 +37,15 @@ class User extends UserSkeleton {
         return $stmt->get_result()->fetch_assoc();
     }
 
-    // Read all users
     public static function getAll() {
         $sql = "SELECT * FROM " . self::$table;
         $result = self::$conn->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    // Update user details
     public static function update($id, $fullname, $email, $password = null) {
         if ($password) {
-            $hashedPassword = HashingPassword($password) ?? password_hash($password, PASSWORD_BCRYPT);
+            $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
             $sql = "UPDATE " . self::$table . " SET fullname = ?, email = ?, password = ? WHERE id = ?";
             $stmt = self::$conn->prepare($sql);
             $stmt->bind_param("sssi", $fullname, $email, $hashedPassword, $id);
@@ -60,7 +57,6 @@ class User extends UserSkeleton {
         return $stmt->execute();
     }
 
-    // Delete user
     public static function delete($id) {
         $sql = "DELETE FROM " . self::$table . " WHERE id = ?";
         $stmt = self::$conn->prepare($sql);
@@ -68,5 +64,4 @@ class User extends UserSkeleton {
         return $stmt->execute();
     }
 }
-
 ?>

@@ -4,9 +4,9 @@
 require_once "QuestionSkeleton.php";
 
 class Question extends QuestionSkeleton {
-    // Initialize database connection
+
     public static function init($conn) {
-        parent::init($conn); // Initialize connection in parent class
+        parent::init($conn);
     }
 
     // Create a new question
@@ -23,8 +23,7 @@ class Question extends QuestionSkeleton {
         $stmt = self::$conn->prepare($sql);
         $stmt->bind_param("i", $id);
         $stmt->execute();
-        $result = $stmt->get_result();
-        return $result->fetch_assoc();
+        return $stmt->get_result()->fetch_assoc();
     }
 
     // Read all questions
