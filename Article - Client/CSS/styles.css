@@ -23,8 +23,8 @@ section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Sign Up */
-.signup {
+/* Sign Up and Login */
+.signup, .login {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,7 +33,7 @@ section {
   padding: 20px;
 }
 
-.signup form {
+.signup form, .login form {
   background: #fff;
   padding: 20px;
   border-radius: 8px;
@@ -44,13 +44,13 @@ section {
   max-width: 400px; /* Ensures a readable width on larger screens */
 }
 
-.signup label {
+.signup label, .login label {
   font-weight: bold;
   margin-top: 10px;
   text-align: start;
 }
 
-.signup input {
+.signup input, .login input {
   padding: 12px;
   margin-top: 5px;
   border: 1px solid #ccc;
@@ -60,11 +60,11 @@ section {
   box-sizing: border-box;
 }
 
-.signup input::placeholder {
+.signup input::placeholder, .login input::placeholder {
   color: #888;
 }
 
-.signup button {
+.signup button, .login button {
   background-color: #28a745;
   color: white;
   padding: 12px;
@@ -76,23 +76,23 @@ section {
   transition: background 0.3s ease;
 }
 
-.signup button:hover {
+.signup button:hover, .login button:hover {
   background-color: #218838;
 }
 
 /* Responsive Design */
 @media (max-width: 480px) {
-  .signup form {
+  .signup form, .login form {
     padding: 15px;
     max-width: 90%; /* Adjusts form width for smaller screens */
   }
 
-  .signup input {
+  .signup input, .login input {
     font-size: 14px; /* Slightly smaller text for compact screens */
     padding: 10px;
   }
 
-  .signup button {
+  .signup button, .login button {
     font-size: 14px;
     padding: 10px;
   }
