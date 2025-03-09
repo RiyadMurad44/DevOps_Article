@@ -29,6 +29,8 @@ try{
 
     $result = User::create($name, $email, $password);
     $response = $result ? sendResponse(true, "User created!") : sendResponse(false, "Failed to create User");
+    http_response_code(200);
+    return json_encode($result);
 }catch (\Throwable $e) {
     http_response_code(400);
 
@@ -37,5 +39,5 @@ try{
     ]);
 }
 
-// echo json_encode($response);
+echo json_encode($result);
 ?>
