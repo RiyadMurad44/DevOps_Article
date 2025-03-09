@@ -37,6 +37,21 @@ class User extends UserSkeleton {
         return $stmt->get_result()->fetch_assoc();
     }
 
+    // Find user by email
+    public static function findByEmail($email) {
+        $query = "SELECT * FROM users WHERE email = ?";
+        $stmt = self::$conn->prepare($query);
+        $stmt->bind_param("s", $email);  // Bind email parameter
+        $stmt->execute();
+        $result = $stmt->get_result();
+        
+        if ($result->num_rows > 0) {
+            return $result->fetch_assoc();  // Return user data if email exists
+        } else {
+            return null;  // Return null if user doesn't exist
+        }
+    }
+
     public static function getAll() {
         $sql = "SELECT * FROM " . self::$table;
         $result = self::$conn->query($sql);
