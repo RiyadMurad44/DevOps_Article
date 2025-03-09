@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 // Database configuration
 $host = "localhost"; 
 $username = "root"; 
-$password = ""; //SEf123456;
+$password = "SEf123456"; //SEf123456;
 $database = "devops_article"; 
 
 // Create a connection

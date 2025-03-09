@@ -115,6 +115,7 @@ abstract class UserSkeleton {
     // Abstract CRUD methods to enforce implementation in child classes
     abstract public static function create($fullname, $email, $password);
     abstract public static function getById($id);
+    public static function findByEmail($email)
     abstract public static function getAll();
     abstract public static function update($id, $fullname, $email, $password);
     abstract public static function delete($id);
