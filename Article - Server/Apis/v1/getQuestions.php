@@ -1,5 +1,5 @@
 <?php
-// require_once("../../utils.php");
+require_once("../../utils.php");
 require_once("../../Models/Question.php");
 require_once("../../Connection/connection.php");
 
