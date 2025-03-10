@@ -4,7 +4,7 @@
 // base_api = IP_api + api_path;
 
 base_api = "http://52.47.74.242/api";
-
+ 
 let allQuestions = [];
 
 async function fetchAndDisplayQuestions() {
