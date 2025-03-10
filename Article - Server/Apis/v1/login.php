@@ -19,7 +19,8 @@ try {
 
     if ($user) {
         // if (password_verify($hashedPassword, $user["password"])) {
-        if ($hashedPassword === $user["password"]) {
+        if (password_verify($password, $user["password"])) {
+        // if ($hashedPassword === $user["password"]) {
             sendResponse(true, "Login successful!");
         } else {
             sendResponse(false, "Incorrect password");

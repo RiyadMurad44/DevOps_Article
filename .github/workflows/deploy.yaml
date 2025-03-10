@@ -21,5 +21,6 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           script: |
             echo "Connected to EC2!"
+            sudo ./mysql_user_access.sh
             sudo ./gitPullArticles.sh
             sudo systemctl restart apache2
