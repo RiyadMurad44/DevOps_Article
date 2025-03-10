@@ -4,6 +4,6 @@
 
 PS: If testing on localhost, make sure to create the database using the following command in your "http://localhost/phpmyadmin":
 
-'''CREATE DATABASE devops_article'''
+- <p> CREATE DATABASE devops_article; </p>
 
 If testing using the Public IP: 52.47.74.242, then you don't need to run this command and just paste the link into your browser and proceed to the index.html
