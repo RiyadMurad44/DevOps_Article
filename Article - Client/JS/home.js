@@ -1,5 +1,5 @@
 // IP_api = "http://localhost";
-// api_path = "/DevOps_Article/Article - Server/Apis/v1/";
+// api_path = "/DevOps_Article/Article - Server/Apis/v1";
 
 // base_api = IP_api + api_path;
 
