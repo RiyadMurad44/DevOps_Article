@@ -1,4 +1,5 @@
-base_api = "http://localhost/DevOps_Article/Article - Server/Apis/v1";
+// base_api = "http://localhost/DevOps_Article/Article - Server/Apis/v1";
+base_api = "http://52.47.74.242/api";
 
 login = async function(){
     event.preventDefault();
