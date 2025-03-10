@@ -1,5 +1,5 @@
 <?php
-require_once("../../utils.php");
+// require_once("../../utils.php");
 require_once("../../Models/Question.php");
 require_once("../../Connection/connection.php");
 
@@ -11,6 +11,7 @@ try {
         "success" => true,
         "data" => $questions
     ]);
+    exit();
 } catch (\Throwable $e) {
     http_response_code(400);
 

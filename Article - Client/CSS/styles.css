@@ -15,7 +15,7 @@ body {
 /* Sections */
 section {
   text-align: center;
-  max-width: 700px;
+  max-width: 1100px;
   margin: 40px auto;
   padding: 40px;
   background: white;
@@ -78,6 +78,57 @@ section {
 
 .signup button:hover, .login button:hover {
   background-color: #218838;
+}
+
+/* Features Section */
+.features {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f8f9fa;
+}
+
+.features h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature-box {
+  width: 250px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature-box img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.feature-box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.feature-box p {
+  font-size: 16px;
+  color: #555;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
 }
 
 /* Responsive Design */
