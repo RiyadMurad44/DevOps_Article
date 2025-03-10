@@ -6,4 +6,4 @@ PS: If testing on localhost, make sure to create the database using the followin
 
 <script> CREATE DATABASE devops_article </script>
 
-If testing using the <a href="http://52.47.74.242" target="_blank">public IP</a>, then you don't need to run this command and just proceed to the index.html
+If testing using the <a href="https://52.47.74.242" target="_blank">public IP</a>, then you don't need to run this command and just proceed to the index.html
