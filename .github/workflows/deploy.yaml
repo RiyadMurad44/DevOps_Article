@@ -21,6 +21,7 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           script: |
             echo "Connected to EC2!"
+            sudo echo "MYSQL_PASSWORD=${{ secrets.MYSQL_PASSWORD }}" >> $GITHUB_ENV
             sudo ./mysql_user_access.sh
             sudo ./gitPullArticles.sh
             sudo systemctl restart apache2
