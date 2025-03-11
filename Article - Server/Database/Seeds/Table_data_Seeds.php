@@ -1,9 +1,7 @@
 <?php
 require_once("../../Models/Question.php");
-require_once("../../Connection/connection.php");
 
 function seedQuestions() {
-    Question::init($GLOBALS['conn']);
 
     $sampleQuestions = [
         ["What is the main focus of the paper?", "The paper focuses on how Flickr achieved over 10 deployments per day, highlighting the importance of collaboration between development (Dev) and operations (Ops) teams to create a smooth, efficient deployment pipeline."],
@@ -32,10 +30,11 @@ function seedQuestions() {
         try {
             $question = $q[0];
             $answer = $q[1];
+            global $conn;
 
             // Check if the question already exists
             $checkSql = "SELECT COUNT(*) AS count FROM questions WHERE question = ?";
-            $stmt = $GLOBALS['conn']->prepare($checkSql);
+            $stmt = $conn->prepare($checkSql);
             $stmt->bind_param("s", $question);
             $stmt->execute();
             $result = $stmt->get_result()->fetch_assoc();

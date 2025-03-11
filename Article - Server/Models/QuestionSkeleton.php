@@ -2,9 +2,7 @@
 // QuestionSkeleton.php
 
 abstract class QuestionSkeleton {
-    protected static $conn;
-    protected static $table = "questions";
-
+    
     protected $id;
     protected $question;
     protected $answer;
@@ -14,11 +12,6 @@ abstract class QuestionSkeleton {
         $this->id = $id;
         $this->question = $question;
         $this->answer = $answer;
-    }
-
-    // Initialize the database connection
-    public static function init($conn) {
-        self::$conn = $conn;
     }
 
     // Getters

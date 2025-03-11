@@ -1,8 +1,6 @@
 <?php
 
 abstract class UserSkeleton {
-    protected static $conn;
-    protected static $table = "users";
 
     protected $id;
     protected $fullname;
@@ -14,10 +12,6 @@ abstract class UserSkeleton {
         $this->fullname = $fullname;
         $this->email = $email;
         $this->password = $password;
-    }
-
-    public static function init($conn) {
-        self::$conn = $conn;
     }
 
     // Getters

@@ -8,9 +8,6 @@ require_once("../../Database/Migrations/UserTable.php");
 require_once("../../Database/Seeds/Table_data_Seeds.php");
 require_once("../../Database/Migrations/QuestionTable.php");
 
-User::init($conn);
-Question::init($conn);
-
 if(isset($data["fullname"]) && isset($data["email"]) && isset($data["password"])) {
     $name = $data["fullname"];
     $email = $data["email"];
