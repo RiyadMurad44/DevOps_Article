@@ -3,8 +3,6 @@ require_once("../../utils.php");
 require_once("../../Models/User.php");
 require_once("../../Connection/connection.php");
 
-User::init($conn);
-
 if (isset($data["email"]) && isset($data["password"])) {
     $email = $data["email"];
     $password = $data["password"];

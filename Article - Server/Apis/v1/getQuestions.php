@@ -3,8 +3,6 @@ require_once("../../utils.php");
 require_once("../../Models/Question.php");
 require_once("../../Connection/connection.php");
 
-Question::init($conn);
-
 try {
     $questions = Question::getAll();
     echo json_encode([

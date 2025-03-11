@@ -11,12 +11,8 @@ if(isset($data["question"]) && isset($data["answer"])) {
     sendResponse(false, "Missing parameters");
 }
 
-Question::init($conn);
-// $questionModel = new Question();
-
 try {
     $result = Question::create($question, $answer);
-    // $result = $questionModel->create($question, $answer);
     $response = $result ? sendResponse(true, "Question created!") : sendResponse(false, "Failed to create question");
 } catch (\Throwable $e) {
     http_response_code(400);
